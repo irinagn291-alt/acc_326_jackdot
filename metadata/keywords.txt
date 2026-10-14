@@ -1,0 +1,1 @@
+punch,read,peel,history,tie,verdict,names,draw,spar,rows,card,picker,intro,erase,seeded

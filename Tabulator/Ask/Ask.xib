@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AskViewController" customModule="Tabulator" customModuleProvider="target">
+            <connections>
+                <outlet property="blurView" destination="blur" id="ob"/>
+                <outlet property="emptyAddButton" destination="add" id="oa"/>
+                <outlet property="emptyLine" destination="eline" id="oe"/>
+                <outlet property="emptyRoot" destination="empty" id="or"/>
+                <outlet property="emptyTitle" destination="etitle" id="ot"/>
+                <outlet property="errorLine" destination="xline" id="oxl"/>
+                <outlet property="errorRetry" destination="retry" id="oxr"/>
+                <outlet property="errorRoot" destination="error" id="ox"/>
+                <outlet property="errorTitle" destination="xtitle" id="oxt"/>
+                <outlet property="hintLabel" destination="hint" id="oh"/>
+                <outlet property="historyButton" destination="hist" id="ohi"/>
+                <outlet property="nameField" destination="field" id="of"/>
+                <outlet property="peelButton" destination="peel" id="op"/>
+                <outlet property="plateView" destination="plate" id="opl"/>
+                <outlet property="readButton" destination="read" id="ord"/>
+                <outlet property="settingsButton" destination="gear" id="osg"/>
+                <outlet property="sparLabel" destination="spar" id="os"/>
+                <outlet property="statusLabel" destination="status" id="ost"/>
+                <outlet property="tableView" destination="table" id="otb"/>
+                <outlet property="tieButton" destination="tie" id="oti"/>
+                <outlet property="view" destination="root" id="ov"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="root">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blur">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="blurContent">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="systemThinMaterialDark"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plate" customClass="AskPlateView" customModule="Tabulator" customModuleProvider="target">
+                    <rect key="frame" x="16" y="75" width="358" height="735"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hist">
+                            <rect key="frame" x="16" y="16" width="88" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="hh"/>
+                            </constraints>
+                            <state key="normal" title="History"/>
+                            <connections>
+                                <action selector="historyTapped" destination="-1" eventType="touchUpInside" id="ah"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gear">
+                            <rect key="frame" x="254" y="16" width="88" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="gh"/>
+                            </constraints>
+                            <state key="normal" title="Settings"/>
+                            <connections>
+                                <action selector="settingsTapped" destination="-1" eventType="touchUpInside" id="ag"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Punched" lineBreakMode="tailTruncation" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="status">
+                            <rect key="frame" x="16" y="72" width="326" height="64"/>
+                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Punch rows, then Read." lineBreakMode="wordWrap" numberOfLines="3" translatesAutoresizingMaskIntoConstraints="NO" id="hint">
+                            <rect key="frame" x="16" y="140" width="326" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a name" translatesAutoresizingMaskIntoConstraints="NO" id="field">
+                            <rect key="frame" x="16" y="176" width="246" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="fh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tie">
+                            <rect key="frame" x="270" y="176" width="72" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="tw"/>
+                                <constraint firstAttribute="height" constant="44" id="th"/>
+                            </constraints>
+                            <state key="normal" title="Tie"/>
+                            <connections>
+                                <action selector="tieTapped" destination="-1" eventType="touchUpInside" id="at"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="spar">
+                            <rect key="frame" x="16" y="228" width="326" height="0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="88" translatesAutoresizingMaskIntoConstraints="NO" id="table">
+                            <rect key="frame" x="16" y="236" width="326" height="380"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peel" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                            <rect key="frame" x="16" y="624" width="326" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ph"/>
+                            </constraints>
+                            <state key="normal" title="Peel"/>
+                            <connections>
+                                <action selector="peelTapped" destination="-1" eventType="touchUpInside" id="ap"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="read" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                            <rect key="frame" x="16" y="676" width="326" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="rh"/>
+                            </constraints>
+                            <state key="normal" title="Read"/>
+                            <connections>
+                                <action selector="readTapped" destination="-1" eventType="touchUpInside" id="ar"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hist" firstAttribute="leading" secondItem="plate" secondAttribute="leading" constant="16" id="c1"/>
+                        <constraint firstItem="hist" firstAttribute="top" secondItem="plate" secondAttribute="top" constant="16" id="c2"/>
+                        <constraint firstAttribute="trailing" secondItem="gear" secondAttribute="trailing" constant="16" id="c3"/>
+                        <constraint firstItem="gear" firstAttribute="top" secondItem="hist" secondAttribute="top" id="c4"/>
+                        <constraint firstItem="status" firstAttribute="leading" secondItem="plate" secondAttribute="leading" constant="16" id="c5"/>
+                        <constraint firstAttribute="trailing" secondItem="status" secondAttribute="trailing" constant="16" id="c6"/>
+                        <constraint firstItem="status" firstAttribute="top" secondItem="hist" secondAttribute="bottom" constant="12" id="c7"/>
+                        <constraint firstItem="hint" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="c8"/>
+                        <constraint firstItem="hint" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="c9"/>
+                        <constraint firstItem="hint" firstAttribute="top" secondItem="status" secondAttribute="bottom" constant="4" id="c10"/>
+                        <constraint firstItem="field" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="c11"/>
+                        <constraint firstItem="field" firstAttribute="top" secondItem="hint" secondAttribute="bottom" constant="12" id="c12"/>
+                        <constraint firstItem="tie" firstAttribute="leading" secondItem="field" secondAttribute="trailing" constant="8" id="c13"/>
+                        <constraint firstAttribute="trailing" secondItem="tie" secondAttribute="trailing" constant="16" id="c14"/>
+                        <constraint firstItem="tie" firstAttribute="centerY" secondItem="field" secondAttribute="centerY" id="c15"/>
+                        <constraint firstItem="spar" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="c16"/>
+                        <constraint firstItem="spar" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="c17"/>
+                        <constraint firstItem="spar" firstAttribute="top" secondItem="field" secondAttribute="bottom" constant="8" id="c18"/>
+                        <constraint firstItem="table" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="c19"/>
+                        <constraint firstItem="table" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="c20"/>
+                        <constraint firstItem="table" firstAttribute="top" secondItem="spar" secondAttribute="bottom" constant="8" id="c21"/>
+                        <constraint firstItem="peel" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="c22"/>
+                        <constraint firstItem="peel" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="c23"/>
+                        <constraint firstItem="peel" firstAttribute="top" secondItem="table" secondAttribute="bottom" constant="8" id="c24"/>
+                        <constraint firstItem="read" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="c25"/>
+                        <constraint firstItem="read" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="c26"/>
+                        <constraint firstItem="read" firstAttribute="top" secondItem="peel" secondAttribute="bottom" constant="8" id="c27"/>
+                        <constraint firstAttribute="bottom" secondItem="read" secondAttribute="bottom" constant="16" id="c28"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="empty">
+                    <rect key="frame" x="0.0" y="59" width="390" height="751"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Card is blank" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="etitle">
+                            <rect key="frame" x="16" y="80" width="358" height="48"/>
+                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="36"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Type two names." lineBreakMode="wordWrap" numberOfLines="3" translatesAutoresizingMaskIntoConstraints="NO" id="eline">
+                            <rect key="frame" x="16" y="136" width="358" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab_EmptyHome" translatesAutoresizingMaskIntoConstraints="NO" id="eart">
+                            <rect key="frame" x="16" y="176" width="358" height="480"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement">NO</bool>
+                            </accessibility>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="add" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                            <rect key="frame" x="16" y="691" width="358" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="adh"/>
+                            </constraints>
+                            <state key="normal" title="Add a row"/>
+                            <connections>
+                                <action selector="emptyAddTapped" destination="-1" eventType="touchUpInside" id="aa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.06" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="etitle" firstAttribute="leading" secondItem="empty" secondAttribute="leading" constant="16" id="e1"/>
+                        <constraint firstAttribute="trailing" secondItem="etitle" secondAttribute="trailing" constant="16" id="e2"/>
+                        <constraint firstItem="etitle" firstAttribute="top" secondItem="empty" secondAttribute="top" constant="80" id="e3"/>
+                        <constraint firstItem="eline" firstAttribute="leading" secondItem="etitle" secondAttribute="leading" id="e4"/>
+                        <constraint firstItem="eline" firstAttribute="trailing" secondItem="etitle" secondAttribute="trailing" id="e5"/>
+                        <constraint firstItem="eline" firstAttribute="top" secondItem="etitle" secondAttribute="bottom" constant="8" id="e6"/>
+                        <constraint firstItem="eart" firstAttribute="leading" secondItem="empty" secondAttribute="leading" constant="16" id="e10"/>
+                        <constraint firstAttribute="trailing" secondItem="eart" secondAttribute="trailing" constant="16" id="e11"/>
+                        <constraint firstItem="eart" firstAttribute="top" secondItem="eline" secondAttribute="bottom" constant="16" id="e12"/>
+                        <constraint firstItem="add" firstAttribute="top" secondItem="eart" secondAttribute="bottom" constant="16" id="e13"/>
+                        <constraint firstItem="add" firstAttribute="leading" secondItem="empty" secondAttribute="leading" constant="16" id="e7"/>
+                        <constraint firstAttribute="trailing" secondItem="add" secondAttribute="trailing" constant="16" id="e8"/>
+                        <constraint firstAttribute="bottom" secondItem="add" secondAttribute="bottom" constant="16" id="e9"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="error">
+                    <rect key="frame" x="0.0" y="59" width="390" height="751"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Card failed" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="xtitle">
+                            <rect key="frame" x="16" y="80" width="358" height="48"/>
+                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="36"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stored card could not be read." lineBreakMode="wordWrap" numberOfLines="4" translatesAutoresizingMaskIntoConstraints="NO" id="xline">
+                            <rect key="frame" x="16" y="136" width="358" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="retry" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                            <rect key="frame" x="16" y="691" width="358" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="xh"/>
+                            </constraints>
+                            <state key="normal" title="Start blank"/>
+                            <connections>
+                                <action selector="errorRetryTapped" destination="-1" eventType="touchUpInside" id="ax"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.06" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xtitle" firstAttribute="leading" secondItem="error" secondAttribute="leading" constant="16" id="x1"/>
+                        <constraint firstAttribute="trailing" secondItem="xtitle" secondAttribute="trailing" constant="16" id="x2"/>
+                        <constraint firstItem="xtitle" firstAttribute="top" secondItem="error" secondAttribute="top" constant="80" id="x3"/>
+                        <constraint firstItem="xline" firstAttribute="leading" secondItem="xtitle" secondAttribute="leading" id="x4"/>
+                        <constraint firstItem="xline" firstAttribute="trailing" secondItem="xtitle" secondAttribute="trailing" id="x5"/>
+                        <constraint firstItem="xline" firstAttribute="top" secondItem="xtitle" secondAttribute="bottom" constant="8" id="x6"/>
+                        <constraint firstItem="retry" firstAttribute="leading" secondItem="error" secondAttribute="leading" constant="16" id="x7"/>
+                        <constraint firstAttribute="trailing" secondItem="retry" secondAttribute="trailing" constant="16" id="x8"/>
+                        <constraint firstAttribute="bottom" secondItem="retry" secondAttribute="bottom" constant="16" id="x9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe"/>
+            <color key="backgroundColor" white="0.06" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="blur" firstAttribute="leading" secondItem="root" secondAttribute="leading" id="b1"/>
+                <constraint firstAttribute="trailing" secondItem="blur" secondAttribute="trailing" id="b2"/>
+                <constraint firstItem="blur" firstAttribute="top" secondItem="root" secondAttribute="top" id="b3"/>
+                <constraint firstAttribute="bottom" secondItem="blur" secondAttribute="bottom" id="b4"/>
+                <constraint firstItem="plate" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="p1"/>
+                <constraint firstItem="safe" firstAttribute="trailing" secondItem="plate" secondAttribute="trailing" constant="16" id="p2"/>
+                <constraint firstItem="plate" firstAttribute="top" secondItem="safe" secondAttribute="top" constant="16" id="p3"/>
+                <constraint firstItem="safe" firstAttribute="bottom" secondItem="plate" secondAttribute="bottom" constant="8" id="p4"/>
+                <constraint firstItem="empty" firstAttribute="leading" secondItem="root" secondAttribute="leading" id="em1"/>
+                <constraint firstAttribute="trailing" secondItem="empty" secondAttribute="trailing" id="em2"/>
+                <constraint firstItem="empty" firstAttribute="top" secondItem="safe" secondAttribute="top" id="em3"/>
+                <constraint firstItem="empty" firstAttribute="bottom" secondItem="safe" secondAttribute="bottom" id="em4"/>
+                <constraint firstItem="error" firstAttribute="leading" secondItem="root" secondAttribute="leading" id="er1"/>
+                <constraint firstAttribute="trailing" secondItem="error" secondAttribute="trailing" id="er2"/>
+                <constraint firstItem="error" firstAttribute="top" secondItem="safe" secondAttribute="top" id="er3"/>
+                <constraint firstItem="error" firstAttribute="bottom" secondItem="safe" secondAttribute="bottom" id="er4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

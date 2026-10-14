@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RowCell" insetsLayoutMarginsFromSafeArea="NO" id="cell" customClass="RowCell" customModule="Tabulator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cell" id="content">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plate">
+                        <rect key="frame" x="0.0" y="4" width="390" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="name">
+                                <rect key="frame" x="16" y="12" width="290" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hole">
+                                <rect key="frame" x="322" y="10" width="52" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="hw"/>
+                                    <constraint firstAttribute="height" constant="44" id="hh"/>
+                                </constraints>
+                                <state key="normal" title="Out"/>
+                                <connections>
+                                    <action selector="punchTapped" destination="cell" eventType="touchUpInside" id="act"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="name" firstAttribute="leading" secondItem="plate" secondAttribute="leading" constant="16" id="nl"/>
+                            <constraint firstItem="name" firstAttribute="top" secondItem="plate" secondAttribute="top" constant="12" id="ny"/>
+                            <constraint firstAttribute="bottom" secondItem="name" secondAttribute="bottom" constant="12" id="nb"/>
+                            <constraint firstItem="hole" firstAttribute="leading" secondItem="name" secondAttribute="trailing" constant="16" id="gap"/>
+                            <constraint firstAttribute="trailing" secondItem="hole" secondAttribute="trailing" constant="16" id="tr"/>
+                            <constraint firstItem="hole" firstAttribute="centerY" secondItem="plate" secondAttribute="centerY" id="hy"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="ph"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="plate" firstAttribute="leading" secondItem="content" secondAttribute="leading" id="pl"/>
+                    <constraint firstAttribute="trailing" secondItem="plate" secondAttribute="trailing" id="pr"/>
+                    <constraint firstItem="plate" firstAttribute="top" secondItem="content" secondAttribute="top" constant="4" id="pt"/>
+                    <constraint firstAttribute="bottom" secondItem="plate" secondAttribute="bottom" constant="4" id="pb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="holeButton" destination="hole" id="o1"/>
+                <outlet property="nameLabel" destination="name" id="o2"/>
+                <outlet property="plate" destination="plate" id="o3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

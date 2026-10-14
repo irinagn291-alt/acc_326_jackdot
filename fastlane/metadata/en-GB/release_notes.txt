@@ -1,0 +1,9 @@
+This is version 1.0.
+
+Tabulator is a punch-card picker for people who need one honest pick from typed names. Add rows, punch the names still in play, then tap Read so one of those punched rows is filed as the pick.
+
+First launch on a device shows three pages: The card; Punch, then Read; Peel. Skip or Continue opens the card.
+
+Type a name to add a row (starts Out). Punch holes In, then Read. Peel drops the newest verdict so Read can run again. History lists filed verdicts. Tie files two names, even chance, both already In. Card settings includes Seeded draw, Show the card intro, Contact Support and Erase card.
+
+English UI only. Portrait only, iPhone and iPad. Everything remains on this device.

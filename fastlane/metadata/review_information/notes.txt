@@ -1,0 +1,15 @@
+No permission prompts appear at launch or later. The app asks for no system permissions, so there is no usage-description string.
+
+There is no login, no in-app purchase, no user-generated content, no account deletion flow, and no App Tracking Transparency prompt. No credentials or demo account are needed.
+
+Tabulator is a punch-card picker for people who need one honest pick from typed names. You add rows, punch the names still in play, then tap Read so one of those punched rows files as the pick. There are no weights, no wheel, and no scored list.
+
+On a device, a first launch that has never finished the intro shows three pages. Skip is always at the bottom. The primary button is Next on the first two pages and Continue on the last. Page one is The card: “The card holds the rows still in play.” Page two is Punch, then Read: “Punch a hole so the row can win. Read files one pick.” Page three is Peel: “Peel drops the newest verdict. History keeps the file.” Skip or Continue ends the intro and opens the card. The empty card shows Card is blank, Type two names., and Add a row. Add a row opens an alert titled Add a row with “Type a name.”, a field Type a name, Cancel, and Add a row. Type a name, then Add a row. A new row starts Out. Tap the hole so it reads In. Add a second name, punch it In, and tap Read. The large word becomes the filed name and the line reads Verdict filed. Peel to read again. Read stays off until Peel. Tap Peel to drop the newest verdict. Rows stay. Tap History to see each Verdict, oldest to newest, then Close. Tap Tie, fill Left name and Right name, then File the tie. That replaces the card with those two rows already In. History is not cleared. If either field is empty, the title changes to Spar and nothing is filed. Close leaves the card unchanged. Tap Settings for Card settings: Seeded draw. Rows n . Verdicts m ., Show the card intro, Contact Support, and Erase card. Erase card shows “Rows and verdicts will be erased.” with Cancel and Erase card. Confirm wipes rows and verdicts. Show the card intro shows the three pages again and does not erase the card. On the Simulator, a first run can skip the intro and open a card that already has punched rows Mara Quill, Owen Pike, and Lina Voss, with History already holding verdicts, so Read is already legal. That seed does not run on a physical device.
+
+Everything stays on this device. Contact Support on Card settings opens the support page.
+
+The English UI has no region lock. Counts and History dates follow the device locale and calendar.
+
+No licence or regulated-industry paperwork applies. Tabulator is a Lifestyle punch-card picker and does not provide a regulated service.
+
+The app is a personal log only and gives no recommendations. It does not scan barcodes or QR codes.

@@ -1,0 +1,11 @@
+Tabulator is a punch-card picker for people who need one honest pick from typed names. You add rows, punch the names still in play, then tap Read so one of those punched rows files as the pick. There are no weights, no wheel, and no scored list.
+
+• The card shows Blank, Open, Punched, or Read. After a successful Read, the large word is the filed name.
+• Type a name adds a row that starts Out. Tap the hole to flip In or Out. Only In rows can win.
+• Read files one pick from punched, non-blank rows (seeded draw, even chance). Fewer than two such rows turns Read into Spar and keeps the card.
+• Peel drops the newest verdict so Read can run again. Rows and History stay.
+• History lists filed verdicts from oldest to newest. Peel does not remove them.
+• Tie takes a Left name and a Right name, even chance, both already In. File the tie replaces the card rows. History is not cleared.
+• Card settings shows Seeded draw with row and verdict counts, Show the card intro, Contact Support, and Erase card.
+
+English UI, portrait only, iPhone and iPad, dark appearance, iOS 17.0 or later. Everything stays on this device.

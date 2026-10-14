@@ -1,0 +1,10 @@
+Version 1.0 is the first release of Tabulator.
+
+• Add rows with Type a name. Each new row starts Out. Punch a hole In or Out.
+• Read files one pick from punched, non-blank rows. Even chance. Seeded draw.
+• Spar when fewer than two punched non-blank rows are in play. The card stays.
+• Peel drops the newest verdict so Read can run again. Rows and History stay.
+• History lists each Verdict in order, oldest to newest.
+• Tie: Left name and Right name, both In. File the tie replaces the rows. History remains.
+• Card settings: Seeded draw counts, Show the card intro, Contact Support, Erase card.
+• First launch on a device shows three intro pages: The card, Punch, then Read, and Peel. Skip or Continue opens the card.

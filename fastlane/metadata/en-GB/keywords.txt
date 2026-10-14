@@ -1,0 +1,1 @@
+punch-card,picker,names,read,peel,history,tie,verdict,rows,draw,spar,hole

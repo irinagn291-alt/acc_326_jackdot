@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Tabulator" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="root" id="v"/>
+                <outlet property="titleLabel" destination="title" id="t"/>
+                <outlet property="statusLabel" destination="status" id="s"/>
+                <outlet property="contactButton" destination="contact" id="c"/>
+                <outlet property="retryButton" destination="retry" id="ry"/>
+                <outlet property="resetButton" destination="reset" id="r"/>
+                <outlet property="rerunButton" destination="rerun" id="u"/>
+                <outlet property="closeButton" destination="close" id="k"/>
+                <outlet property="erasePlate" destination="erasePlate" id="ep"/>
+                <outlet property="emptyRoot" destination="empty" id="e"/>
+                <outlet property="errorRoot" destination="error" id="x"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="root">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="close">
+                    <rect key="frame" x="286" y="67" width="88" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ch"/>
+                    </constraints>
+                    <state key="normal" title="Close" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="closeTapped" destination="-1" eventType="touchUpInside" id="ac"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Card settings" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="title">
+                    <rect key="frame" x="16" y="67" width="250" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Seeded draw. Rows 3. Verdicts 3." lineBreakMode="wordWrap" numberOfLines="4" translatesAutoresizingMaskIntoConstraints="NO" id="status">
+                    <rect key="frame" x="16" y="127" width="358" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="rerun" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                    <rect key="frame" x="16" y="215" width="358" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="rh"/>
+                    </constraints>
+                    <state key="normal" title="Show the card intro"/>
+                    <connections>
+                        <action selector="rerunTapped" destination="-1" eventType="touchUpInside" id="ar"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="contact" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                    <rect key="frame" x="16" y="275" width="358" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="coh"/>
+                    </constraints>
+                    <state key="normal" title="Contact"/>
+                    <connections>
+                        <action selector="contactTapped" destination="-1" eventType="touchUpInside" id="aco"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erasePlate">
+                    <rect key="frame" x="16" y="339" width="358" height="385"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Erase card" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="support">
+                            <rect key="frame" x="16" y="16" width="326" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.980392" green="0.980392" blue="0.980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Erase card removes the rows and the verdicts." lineBreakMode="wordWrap" numberOfLines="4" translatesAutoresizingMaskIntoConstraints="NO" id="eraseLine">
+                            <rect key="frame" x="16" y="48" width="326" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.698039" green="0.698039" blue="0.698039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.121569" green="0.121569" blue="0.121569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="support" firstAttribute="leading" secondItem="erasePlate" secondAttribute="leading" constant="16" id="ep1"/>
+                        <constraint firstAttribute="trailing" secondItem="support" secondAttribute="trailing" constant="16" id="ep2"/>
+                        <constraint firstItem="support" firstAttribute="top" secondItem="erasePlate" secondAttribute="top" constant="16" id="ep3"/>
+                        <constraint firstItem="eraseLine" firstAttribute="leading" secondItem="support" secondAttribute="leading" id="ep4"/>
+                        <constraint firstItem="eraseLine" firstAttribute="trailing" secondItem="support" secondAttribute="trailing" id="ep5"/>
+                        <constraint firstItem="eraseLine" firstAttribute="top" secondItem="support" secondAttribute="bottom" constant="8" id="ep6"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="reset" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                    <rect key="frame" x="16" y="740" width="358" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="reh"/>
+                    </constraints>
+                    <state key="normal" title="Erase card"/>
+                    <connections>
+                        <action selector="resetTapped" destination="-1" eventType="touchUpInside" id="are"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="empty">
+                    <rect key="frame" x="16" y="335" width="358" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="No card on file" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="et">
+                            <rect key="frame" x="16" y="16" width="326" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Rows and verdicts are empty." lineBreakMode="wordWrap" numberOfLines="3" translatesAutoresizingMaskIntoConstraints="NO" id="el">
+                            <rect key="frame" x="16" y="64" width="326" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="et" firstAttribute="leading" secondItem="empty" secondAttribute="leading" constant="16" id="el1"/>
+                        <constraint firstAttribute="trailing" secondItem="et" secondAttribute="trailing" constant="16" id="el2"/>
+                        <constraint firstItem="et" firstAttribute="top" secondItem="empty" secondAttribute="top" constant="16" id="el3"/>
+                        <constraint firstItem="el" firstAttribute="leading" secondItem="et" secondAttribute="leading" id="el4"/>
+                        <constraint firstItem="el" firstAttribute="trailing" secondItem="et" secondAttribute="trailing" id="el5"/>
+                        <constraint firstItem="el" firstAttribute="top" secondItem="et" secondAttribute="bottom" constant="8" id="el6"/>
+                        <constraint firstAttribute="bottom" secondItem="el" secondAttribute="bottom" constant="16" id="el7"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="error">
+                    <rect key="frame" x="16" y="335" width="358" height="160"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Settings failed" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="xt">
+                            <rect key="frame" x="16" y="16" width="326" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stored card could not be read." lineBreakMode="wordWrap" numberOfLines="3" translatesAutoresizingMaskIntoConstraints="NO" id="xl">
+                            <rect key="frame" x="16" y="52" width="326" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="retry" customClass="PressButton" customModule="Tabulator" customModuleProvider="target">
+                            <rect key="frame" x="16" y="100" width="326" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ryh"/>
+                            </constraints>
+                            <state key="normal" title="Retry"/>
+                            <connections>
+                                <action selector="retryTapped" destination="-1" eventType="touchUpInside" id="ary"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xt" firstAttribute="leading" secondItem="error" secondAttribute="leading" constant="16" id="x1"/>
+                        <constraint firstAttribute="trailing" secondItem="xt" secondAttribute="trailing" constant="16" id="x2"/>
+                        <constraint firstItem="xt" firstAttribute="top" secondItem="error" secondAttribute="top" constant="16" id="x3"/>
+                        <constraint firstItem="xl" firstAttribute="leading" secondItem="xt" secondAttribute="leading" id="x4"/>
+                        <constraint firstItem="xl" firstAttribute="trailing" secondItem="xt" secondAttribute="trailing" id="x5"/>
+                        <constraint firstItem="xl" firstAttribute="top" secondItem="xt" secondAttribute="bottom" constant="8" id="x6"/>
+                        <constraint firstItem="retry" firstAttribute="leading" secondItem="xt" secondAttribute="leading" id="x7"/>
+                        <constraint firstItem="retry" firstAttribute="trailing" secondItem="xt" secondAttribute="trailing" id="x8"/>
+                        <constraint firstItem="retry" firstAttribute="top" secondItem="xl" secondAttribute="bottom" constant="8" id="x9"/>
+                        <constraint firstAttribute="bottom" secondItem="retry" secondAttribute="bottom" constant="16" id="x10"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe"/>
+            <color key="backgroundColor" white="0.06" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="close" firstAttribute="top" secondItem="safe" secondAttribute="top" constant="8" id="c1"/>
+                <constraint firstItem="safe" firstAttribute="trailing" secondItem="close" secondAttribute="trailing" constant="16" id="c2"/>
+                <constraint firstItem="status" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="s1"/>
+                <constraint firstItem="safe" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" constant="16" id="s2"/>
+                <constraint firstItem="title" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="t1"/>
+                <constraint firstItem="close" firstAttribute="leading" secondItem="title" secondAttribute="trailing" constant="8" id="t2"/>
+                <constraint firstItem="title" firstAttribute="top" secondItem="close" secondAttribute="top" id="t3"/>
+                <constraint firstItem="status" firstAttribute="top" secondItem="title" secondAttribute="bottom" constant="16" id="s3"/>
+                <constraint firstItem="rerun" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="u1"/>
+                <constraint firstItem="rerun" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="u2"/>
+                <constraint firstItem="rerun" firstAttribute="top" secondItem="status" secondAttribute="bottom" constant="16" id="u3"/>
+                <constraint firstItem="contact" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="o1"/>
+                <constraint firstItem="contact" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="o2"/>
+                <constraint firstItem="contact" firstAttribute="top" secondItem="rerun" secondAttribute="bottom" constant="12" id="o3"/>
+                <constraint firstItem="reset" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="r1"/>
+                <constraint firstItem="reset" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="r2"/>
+                <constraint firstItem="safe" firstAttribute="bottom" secondItem="reset" secondAttribute="bottom" constant="16" id="r3"/>
+                <constraint firstItem="empty" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="e1"/>
+                <constraint firstItem="empty" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="e2"/>
+                <constraint firstItem="erasePlate" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="epL"/>
+                <constraint firstItem="erasePlate" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="epR"/>
+                <constraint firstItem="erasePlate" firstAttribute="top" secondItem="contact" secondAttribute="bottom" constant="16" id="epT"/>
+                <constraint firstItem="reset" firstAttribute="top" secondItem="erasePlate" secondAttribute="bottom" constant="16" id="epB"/>
+                <constraint firstItem="empty" firstAttribute="top" secondItem="contact" secondAttribute="bottom" constant="16" id="e3"/>
+                <constraint firstItem="error" firstAttribute="leading" secondItem="status" secondAttribute="leading" id="z1"/>
+                <constraint firstItem="error" firstAttribute="trailing" secondItem="status" secondAttribute="trailing" id="z2"/>
+                <constraint firstItem="error" firstAttribute="top" secondItem="contact" secondAttribute="bottom" constant="16" id="z3"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
