@@ -1,4 +1,4 @@
-<!-- gf-brief source=1ed7b1c1fe2e778a389ca50e581f900ee76237d68986407db5c5a13b947b9d4d written=2026-10-14T18:27:31+03:00 -->
+<!-- gf-brief source=1ed7b1c1fe2e778a389ca50e581f900ee76237d68986407db5c5a13b947b9d4d written=2026-10-14T18:28:07+03:00 -->
 # Tabulator
 
 ## What it is
